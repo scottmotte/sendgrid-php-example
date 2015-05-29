@@ -2,9 +2,9 @@
 require 'vendor/autoload.php';
 Dotenv::load(__DIR__);
 
-$sendgrid_username = $_ENV['SENDGRID_USERNAME'];
-$sendgrid_password = $_ENV['SENDGRID_PASSWORD'];
-$to                = $_ENV['TO'];
+$sendgrid_username = 'SENDGRID_USERNAME';
+$sendgrid_password = 'SENDGRID_PASSWORD';
+$to                = 'TO';
 
 $sendgrid = new SendGrid($sendgrid_username, $sendgrid_password, array("turn_off_ssl_verification" => true));
 $email    = new SendGrid\Email();
